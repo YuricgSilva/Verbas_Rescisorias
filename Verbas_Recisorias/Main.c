@@ -1,125 +1,72 @@
 #include <stdio.h>
 #include <stdlib.h>
- 
+#include <gconio.h>
+
 void main(){
+	char option[2];
 
-   char opcao,opcao2,opcao3;
-   do{
-//-----Menu---------------------------------------------------------------------------------------------------
-      printf("\t***********************************************************************\n");
-      printf("\t*                          VERBAS RESCISÓRIAS                         *\n");
-      printf("\t***********************************************************************\n");
-      printf("\t*                                 MENU                                *\n");
-      printf("\t*                                                                     *\n");
-      printf("\t* 1-Demissão Sem Justa Calsa                    4-Acordo Entre Partes *\n");
-      printf("\t* 2-Demissão Com Justa Calsa                    5-Demissão Consensual *\n");
-      printf("\t* 3-Pedido de Demissão Pelo Funcionário         0-Sair do Programa    *\n");
-      printf("\t*                                                                     *\n");
-      printf("\t***********************************************************************\n\n");
-      
-      printf("\tInforme a Opção Desejada: ");
-      opcao = getchar();
+	do{
+		printf("Informe a opção desejada: ");
+		option[0]=getchar();
 
-      switch(opcao){
-         case '1':
-            while(opcao2!='n'){
-               scanf("%*c");
-               printf("\t***********************************************************************\n");
-               printf("\t*               Opção escolhida Demissão Sem Justa Calsa              *\n");
-               printf("\t***********************************************************************\n");
+		switch (option[0]){
+		case '1':
+			scanf("%*c");
+			printf("Opção 1 Escolhida Deseja Continuar? s/n: ");
+			option[1]=getchar();
 
-               printf("\tDeseja Continuar? s/n: ");
-               
-               opcao2 = getchar();
-               
-               switch (opcao2){
-                  case 's':
-                     scanf("%*c");
-                     system("clear");
-                     
-                     /* code */
+			switch (option[1])
+			{
+			case 's':
+			case 'S':
+				scanf("%*c");
 
-                     while (opcao3!='s'){
-                        printf("\t***********************************************************************\n");
-                        printf("\t*                       Voltar ao Menu Inicial?                       *\n");
-                        printf("\t***********************************************************************\n");
-                        printf("\tDigite s/n: ");
-                        opcao3 = getchar();
-                        switch (opcao3){
-                           case 'n':
-                              system("clear");
-                              printf("Programa Encerrado!!\n");
-                              exit(0);
-                              break;
-                        }
-                     }
-                     opcao2 = 'n';
-                     break;
-               }
-               system("clear");
-            }
-            break;
+				/*code*/
 
+				printf("Voltar ao Menu Inicial? s/n: ");
+				option[2]=getchar();
+				switch (option[2])
+				{
+				case 's':
+				case 'S':
+					break;
+				case 'n':
+				case 'N':
+					system("clear");
+					printf("Programa Encerrado Com Sucesso!!\n");
+					exit(0);
+					break;
+				default:
+					system("clear");
+					printf("Opção Invalida!!\n");
+					exit(0);
+					break;
+				}
+				break;
+			case 'n':
+			case 'N':
+				break;
+			default:
+				printf("Opção Invalida!!\n");
+				delay(2000);
+				break;
+			}
 
+			break;
+		case '2':
+			printf("Opção 2\n");
+			delay(2000);
+			break;
+		default:
+			printf("Opção Invalida!!\n");
+			delay(2000);
+			break;
+		}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-         case '2':
-            scanf("%*c");
-            system("clear");
-            printf("\t***********************************************************************\n");
-            printf("\t*              Opção escolhida Demissão Com Justa Calsa               *\n");
-            printf("\t***********************************************************************\n\n");
-
-            break;
-         case '3':
-            scanf("%*c");
-            system("clear");
-            printf("\t***********************************************************************\n");
-            printf("\t*        Opção escolhida Pedido de Demissão Pelo Funcionário          *\n");
-            printf("\t***********************************************************************\n\n");
-
-            break;
-         case '4':
-            scanf("%*c");
-            system("clear");
-            printf("\t***********************************************************************\n");
-            printf("\t*                  Opção escolhida Acordo Entre Partes                *\n");
-            printf("\t***********************************************************************\n\n");
-
-            break;
-         case '5':
-            scanf("%*c");
-            system("clear");
-            printf("\t***********************************************************************\n");
-            printf("\t*                 Opção escolhida Demissão Consensual                 *\n");
-            printf("\t***********************************************************************\n\n");
-
-            break;
-         /*default:
-            printf("\tERRO: Opção Não Cadastrada!!\n");
-            break;*/
-      }
-      scanf("%*c");
-      system("clear");
-    } while (opcao!='0');
+		scanf("%*c");
+      	system("clear");
+	} while (option[0]!='0');
+	system("clear");
+	printf("Programa Encerrado Com Sucesso!!\n");
+	exit(0);
 }
