@@ -28,23 +28,28 @@ float DemissaoComJustCaus(){
     ferias_vencidas = salario + (salario/3);
     total = ferias_vencidas + saldo_salario;
  
-    gotoxy(3,9);
-    printf("Saldo de salario = R$ %.2f\n", saldo_salario);
     gotoxy(3,10);
-    printf("Ferias vencidas = R$ %.2f\n", ferias_vencidas);
+    printf("Saldo de salario = R$ %.2f\n", saldo_salario);
     gotoxy(3,11);
+    printf("Ferias vencidas = R$ %.2f\n", ferias_vencidas);
+    gotoxy(3,12);
     printf("Total a receber = R$ %2.f\n", total);
 }
 
 float DemissaoSemJustCaus(){
     float salario, dias_mes, saldo_salario,ferias_vencidas,decimo_terceiro,meses_trab,anos_trabalhados,aviso_previo,fgts,multa_fgts,total_sem;
-    printf("Qual o valor do seu salario ? ");
+    
+    gotoxy(3,5);
+    printf("Qual o valor do seu salario?: ");
     scanf("%f", &salario);
-    printf("Quantos dias do mes voce trabalhou ? ");
+    gotoxy(3,7);
+    printf("Quantos dias do mes voce trabalhou?: ");
     scanf("%f", &dias_mes);
-    printf("Quantos meses você trabalhou no ano ? ");
+    gotoxy(3,9);
+    printf("Quantos meses você trabalhou no ano?: ");
     scanf("%f", &meses_trab);
-    printf("Quantos anos você trabalhou na empresa no total ? ");
+    gotoxy(3,11);
+    printf("Quantos anos você trabalhou na empresa no total?: ");
     scanf("%f", &anos_trabalhados);
 
   
@@ -55,22 +60,32 @@ float DemissaoSemJustCaus(){
     fgts = (salario * 0.08) * (anos_trabalhados * 12);
     multa_fgts = fgts * (0.4);
     total_sem = saldo_salario + ferias_vencidas + decimo_terceiro + aviso_previo + multa_fgts;
-  
+    
+    gotoxy(3,14);
     printf("Saldo de salario = R$ %.1f\n", saldo_salario);
+    gotoxy(3,15);
     printf("Ferias_vencidas = R$ %.1f\n", ferias_vencidas);
+    gotoxy(3,16);
     printf("Decimo terceiro proporcional = R$ %.1f\n", decimo_terceiro);
+    gotoxy(3,17);
     printf("Aviso previo indenizado = R$ %.1f\n", aviso_previo);
+    gotoxy(3,18);
     printf("Multa do fgts = R$ %.1f\n", multa_fgts);
-    printf("Total a receber = R$ %.2f\n,", total_sem);
+    gotoxy(3,19);
+    printf("Total a receber = R$ %.2f\n", total_sem);
 }
 
 float PedidoDeDemissao(){
     float salario, dias_mes, saldo_salario,ferias_vencidas, total,meses_trab,decimo_terceiro;
-    printf("Qual o valor do seu salario ? ");
+
+    gotoxy(3,5);
+    printf("Qual o valor do seu salario?: ");
     scanf("%f", &salario);
-    printf("Quantos dias do mes voce trabalhou ? ");
+    gotoxy(3,7);
+    printf("Quantos dias do mes voce trabalhou?: ");
     scanf("%f", &dias_mes);
-    printf("Quantos meses você trabalhou no ano ? ");
+    gotoxy(3,9);
+    printf("Quantos meses você trabalhou no ano?: ");
     scanf("%f", &meses_trab);
 
 
@@ -79,21 +94,30 @@ float PedidoDeDemissao(){
     ferias_vencidas = salario + (salario/3);
     total = ferias_vencidas + saldo_salario + decimo_terceiro;
 
+    gotoxy(3,12);
     printf("Saldo de salario = R$ %.2f\n", saldo_salario);
+    gotoxy(3,13);
     printf("Ferias vencidas = R$ %.2f\n", ferias_vencidas);
+    gotoxy(3,14);
     printf("Decimo terceiro proporcional = R$ %.1f\n", decimo_terceiro);
+    gotoxy(3,15);
     printf("Total a receber = R$ %2.f\n", total);
 }
 
 float AcordoEntrePartes(){
     float salario, dias_mes, saldo_salario,ferias_vencidas,decimo_terceiro,meses_trab,anos_trabalhados,aviso_previo,fgts,multa_fgts,total_sem;
-    printf("Qual o valor do seu salario ? ");
+
+    gotoxy(3,5);
+    printf("Qual o valor do seu salario?: ");
     scanf("%f", &salario);
-    printf("Quantos dias do mes voce trabalhou ? ");
+    gotoxy(3,7);
+    printf("Quantos dias do mes voce trabalhou?: ");
     scanf("%f", &dias_mes);
-    printf("Quantos meses você trabalhou no ano ? ");
+    gotoxy(3,9);
+    printf("Quantos meses você trabalhou no ano?: ");
     scanf("%f", &meses_trab);
-    printf("Há quantos anos você trabalhou na empresa ? ");
+    gotoxy(3,11);
+    printf("Quantos anos você trabalhou na empresa?: ");
     scanf("%f", &anos_trabalhados);
 
   
@@ -104,25 +128,36 @@ float AcordoEntrePartes(){
     fgts = (salario * 0.08) * (anos_trabalhados * 12);
     multa_fgts = fgts * (0.2);
     total_sem = saldo_salario + ferias_vencidas + decimo_terceiro + aviso_previo + multa_fgts;
-  
+    
+    gotoxy(3,14);
     printf("Saldo de salario = R$ %.2f\n", saldo_salario);
+    gotoxy(3,15);
     printf("Ferias_vencidas = R$ %.2f\n", ferias_vencidas);
+    gotoxy(3,16);
     printf("Decimo terceiro proporcional = R$ %.2f\n", decimo_terceiro);
+    gotoxy(3,17);
     printf("Aviso previo indenizado = R$ %.2f\n", aviso_previo);
+    gotoxy(3,18);
     printf("Multa do fgts = R$ %.2f\n", multa_fgts);
-    printf("Total a receber = R$ %.2f\n,", total_sem);
+    gotoxy(3,19);
+    printf("Total a receber = R$ %.2f\n", total_sem);
   
 }
 
 float RescisaoIndireta(){
     float salario, dias_mes, saldo_salario,ferias_vencidas,decimo_terceiro,meses_trab,anos_trabalhados,aviso_previo,fgts,multa_fgts,total_sem;
-    printf("Qual o valor do seu salario ? ");
+    
+    gotoxy(3,5);
+    printf("Qual o valor do seu salario?: ");
     scanf("%f", &salario);
-    printf("Quantos dias do mes voce trabalhou ? ");
+    gotoxy(3,7);
+    printf("Quantos dias do mes voce trabalhou?: ");
     scanf("%f", &dias_mes);
-    printf("Quantos meses você trabalhou no ano ? ");
+    gotoxy(3,9);
+    printf("Quantos meses você trabalhou no ano?: ");
     scanf("%f", &meses_trab);
-    printf("Há quantos anos você trabalhou na empresa ? ");
+    gotoxy(3,11);
+    printf("Quantos anos você trabalhou na empresa?: ");
     scanf("%f", &anos_trabalhados);
 
   
@@ -134,10 +169,16 @@ float RescisaoIndireta(){
     multa_fgts = fgts * (0.4);
     total_sem = saldo_salario + ferias_vencidas + decimo_terceiro + aviso_previo + multa_fgts;
 
+    gotoxy(3,14);
     printf("Saldo de salario = R$ %.2f\n", saldo_salario);
+    gotoxy(3,15);
     printf("Ferias_vencidas = R$ %.2f\n", ferias_vencidas);
+    gotoxy(3,16);
     printf("Decimo terceiro proporcional = R$ %.2f\n", decimo_terceiro);
+    gotoxy(3,17);
     printf("Aviso previo indenizado = R$ %.2f\n", aviso_previo);
+    gotoxy(3,18);
     printf("Multa do fgts = R$ %.2f\n", multa_fgts);
-    printf("Total a receber = R$ %.2f\n,", total_sem);
+    gotoxy(3,19);
+    printf("Total a receber = R$ %.2f\n", total_sem);
 }

@@ -3,11 +3,8 @@
 
 /*------------View Screens------------*/
 int viewMenu();
-int viewOpcao1();
-int viewOpcao2();
-int viewOpcao3();
-int viewOpcao4();
-int viewOpcao5();
+int viewOpcao();
+int viewClosure();
 /*------------------------------------*/
 
 /*----------View Calculation----------*/
