@@ -1,4 +1,4 @@
-# Verbas_Rescis-rias
+# Verbas Rescisórias
 Trabalho de Programação Estruturada
 
 Software Verbas Rescisórias.
