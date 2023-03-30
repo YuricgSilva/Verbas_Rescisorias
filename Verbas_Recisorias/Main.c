@@ -5,11 +5,12 @@
 #include"View.c"
 #include"Calculation.c"
 
+/*---Menu Initial---------------------------------------------------*/
 void main(){
 	char option[2];
 
 	do{
-		viewMenu();
+		viewMenu();//Chama a View do menu inicial
 		gotoxy(3,12);
 		printf("Informe a opção desejada: ");
 		option[0]=getchar();
@@ -25,13 +26,13 @@ void main(){
 			{
 			case 's':
 			case 'S':
-				scanf("%*c");
-				system("clear");
+				scanf("%*c");//Limpa o buffer do teclado
+				system("clear");//Limpa a tela do terminal 
 
-				gotoxy(25,2);
+				gotoxy(25,2);//Matriz para posicionar o título da página
     			printf("Demissão Sem Justa Causa");
-				viewOpcao();
-				DemissaoSemJustCaus();
+				viewOpcao();//Chama a View de tela padão
+				DemissaoSemJustCaus();//Chama o calculo da opção desejada
 				scanf("%*c");
 
 				gotoxy(3,23);

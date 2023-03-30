@@ -13,37 +13,18 @@
     return 0;
 }*/
   
-float DemissaoComJustCaus(){
-    float salario, dias_mes, saldo_salario,ferias_vencidas, total;
-    
-    gotoxy(3,5);
-    printf("Qual o valor do seu salario?: ");
-    scanf("%f", &salario);
-
-    gotoxy(3,7);
-    printf("Quantos dias do mes voce trabalhou?: ");
-    scanf("%f", &dias_mes);
- 
-    saldo_salario = (salario/30) * dias_mes;
-    ferias_vencidas = salario + (salario/3);
-    total = ferias_vencidas + saldo_salario;
- 
-    gotoxy(3,10);
-    printf("Saldo de salario = R$ %.2f\n", saldo_salario);
-    gotoxy(3,11);
-    printf("Ferias vencidas = R$ %.2f\n", ferias_vencidas);
-    gotoxy(3,12);
-    printf("Total a receber = R$ %2.f\n", total);
-}
-
 float DemissaoSemJustCaus(){
-    float salario, dias_mes, saldo_salario,ferias_vencidas,decimo_terceiro,meses_trab,anos_trabalhados,aviso_previo,fgts,multa_fgts,total_sem;
+    float 
+    salario, dias_mes, saldo_salario,
+    ferias_vencidas,decimo_terceiro,
+    meses_trab,anos_trabalhados,
+    aviso_previo,fgts,multa_fgts,total_sem;
     
     gotoxy(3,5);
-    printf("Qual o valor do seu salario?: ");
+    printf("Qual o valor do seu salário?: ");
     scanf("%f", &salario);
     gotoxy(3,7);
-    printf("Quantos dias do mes voce trabalhou?: ");
+    printf("Quantos dias do mês você trabalhou?: ");
     scanf("%f", &dias_mes);
     gotoxy(3,9);
     printf("Quantos meses você trabalhou no ano?: ");
@@ -62,7 +43,7 @@ float DemissaoSemJustCaus(){
     total_sem = saldo_salario + ferias_vencidas + decimo_terceiro + aviso_previo + multa_fgts;
     
     gotoxy(3,14);
-    printf("Saldo de salario = R$ %.1f\n", saldo_salario);
+    printf("Saldo de salário = R$ %.1f\n", saldo_salario);
     gotoxy(3,15);
     printf("Ferias_vencidas = R$ %.1f\n", ferias_vencidas);
     gotoxy(3,16);
@@ -75,14 +56,41 @@ float DemissaoSemJustCaus(){
     printf("Total a receber = R$ %.2f\n", total_sem);
 }
 
+float DemissaoComJustCaus(){
+    float 
+    salario, dias_mes, saldo_salario,
+    ferias_vencidas, total;
+    
+    gotoxy(3,5);
+    printf("Qual o valor do seu salário?: ");
+    scanf("%f", &salario);
+
+    gotoxy(3,7);
+    printf("Quantos dias do mês você trabalhou?: ");
+    scanf("%f", &dias_mes);
+ 
+    saldo_salario = (salario/30) * dias_mes;
+    ferias_vencidas = salario + (salario/3);
+    total = ferias_vencidas + saldo_salario;
+ 
+    gotoxy(3,10);
+    printf("Saldo de salário = R$ %.2f\n", saldo_salario);
+    gotoxy(3,11);
+    printf("Ferias vencidas = R$ %.2f\n", ferias_vencidas);
+    gotoxy(3,12);
+    printf("Total a receber = R$ %2.f\n", total);
+}
+
 float PedidoDeDemissao(){
-    float salario, dias_mes, saldo_salario,ferias_vencidas, total,meses_trab,decimo_terceiro;
+    float 
+    salario, dias_mes, saldo_salario,ferias_vencidas, 
+    total,meses_trab,decimo_terceiro;
 
     gotoxy(3,5);
-    printf("Qual o valor do seu salario?: ");
+    printf("Qual o valor do seu salário?: ");
     scanf("%f", &salario);
     gotoxy(3,7);
-    printf("Quantos dias do mes voce trabalhou?: ");
+    printf("Quantos dias do mês você trabalhou?: ");
     scanf("%f", &dias_mes);
     gotoxy(3,9);
     printf("Quantos meses você trabalhou no ano?: ");
@@ -95,7 +103,7 @@ float PedidoDeDemissao(){
     total = ferias_vencidas + saldo_salario + decimo_terceiro;
 
     gotoxy(3,12);
-    printf("Saldo de salario = R$ %.2f\n", saldo_salario);
+    printf("Saldo de salário = R$ %.2f\n", saldo_salario);
     gotoxy(3,13);
     printf("Ferias vencidas = R$ %.2f\n", ferias_vencidas);
     gotoxy(3,14);
@@ -105,13 +113,17 @@ float PedidoDeDemissao(){
 }
 
 float AcordoEntrePartes(){
-    float salario, dias_mes, saldo_salario,ferias_vencidas,decimo_terceiro,meses_trab,anos_trabalhados,aviso_previo,fgts,multa_fgts,total_sem;
+    float 
+    salario, dias_mes, saldo_salario,
+    ferias_vencidas,decimo_terceiro,
+    meses_trab,anos_trabalhados,
+    aviso_previo,fgts,multa_fgts,total_sem;
 
     gotoxy(3,5);
-    printf("Qual o valor do seu salario?: ");
+    printf("Qual o valor do seu salário?: ");
     scanf("%f", &salario);
     gotoxy(3,7);
-    printf("Quantos dias do mes voce trabalhou?: ");
+    printf("Quantos dias do mês você trabalhou?: ");
     scanf("%f", &dias_mes);
     gotoxy(3,9);
     printf("Quantos meses você trabalhou no ano?: ");
@@ -130,9 +142,9 @@ float AcordoEntrePartes(){
     total_sem = saldo_salario + ferias_vencidas + decimo_terceiro + aviso_previo + multa_fgts;
     
     gotoxy(3,14);
-    printf("Saldo de salario = R$ %.2f\n", saldo_salario);
+    printf("Saldo de salário = R$ %.2f\n", saldo_salario);
     gotoxy(3,15);
-    printf("Ferias_vencidas = R$ %.2f\n", ferias_vencidas);
+    printf("Ferias vencidas = R$ %.2f\n", ferias_vencidas);
     gotoxy(3,16);
     printf("Decimo terceiro proporcional = R$ %.2f\n", decimo_terceiro);
     gotoxy(3,17);
@@ -145,13 +157,17 @@ float AcordoEntrePartes(){
 }
 
 float RescisaoIndireta(){
-    float salario, dias_mes, saldo_salario,ferias_vencidas,decimo_terceiro,meses_trab,anos_trabalhados,aviso_previo,fgts,multa_fgts,total_sem;
+    float 
+    salario, dias_mes, saldo_salario,
+    ferias_vencidas,decimo_terceiro,
+    meses_trab,anos_trabalhados,
+    aviso_previo,fgts,multa_fgts,total_sem;
     
     gotoxy(3,5);
-    printf("Qual o valor do seu salario?: ");
+    printf("Qual o valor do seu salário?: ");
     scanf("%f", &salario);
     gotoxy(3,7);
-    printf("Quantos dias do mes voce trabalhou?: ");
+    printf("Quantos dias do mês você trabalhou?: ");
     scanf("%f", &dias_mes);
     gotoxy(3,9);
     printf("Quantos meses você trabalhou no ano?: ");
@@ -170,9 +186,9 @@ float RescisaoIndireta(){
     total_sem = saldo_salario + ferias_vencidas + decimo_terceiro + aviso_previo + multa_fgts;
 
     gotoxy(3,14);
-    printf("Saldo de salario = R$ %.2f\n", saldo_salario);
+    printf("Saldo de salário = R$ %.2f\n", saldo_salario);
     gotoxy(3,15);
-    printf("Ferias_vencidas = R$ %.2f\n", ferias_vencidas);
+    printf("Ferias vencidas = R$ %.2f\n", ferias_vencidas);
     gotoxy(3,16);
     printf("Decimo terceiro proporcional = R$ %.2f\n", decimo_terceiro);
     gotoxy(3,17);
