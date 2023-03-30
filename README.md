@@ -1,7 +1,9 @@
-# Verbas_Rescis-rias
+# Verbas Rescisórias
 Trabalho de Programação Estruturada
 
 Software Verbas Rescisórias.
+
+![Menu Inicial Software Verbas Rescisórias](MenuInicial.png)
 
 Como todos sabemos, o processo de rescisão de contrato de trabalho pode ser complicado e estressante para ambas as partes envolvidas. Para o empregador, é necessário realizar cálculos complexos para determinar as verbas rescisórias que devem ser pagas ao empregado. Já para o empregado, é crucial ter certeza de que está recebendo todos os valores que lhe são devidos de forma justa e correta.
 
