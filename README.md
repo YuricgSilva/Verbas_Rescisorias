@@ -1,5 +1,4 @@
 # Verbas Rescisórias
-Trabalho de Programação Estruturada
 
 Software Verbas Rescisórias.
 
